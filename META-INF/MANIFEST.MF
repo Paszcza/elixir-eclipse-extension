@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Elixir Eclipse Extension
+Bundle-SymbolicName: elixir-eclipse-extension;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: Activator
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.swt,
+ org.eclipse.jface,
+ org.eclipse.ui,
+ org.eclipse.ui.forms,
+ org.eclipse.core.runtime,
+ org.eclipse.core.contenttype,
+ org.eclipse.lsp4e,
+ org.eclipse.debug.core,
+ org.eclipse.debug.ui
+Automatic-Module-Name: elixir-eclipse-extension
+Bundle-RequiredExecutionEnvironment: JavaSE-21

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    
+<extension point="org.eclipse.lsp4e.languageServer">
+	<server
+		class="LanguageServerConnectionProvider"
+		id="elixir-eclipse-extension.elixirLS"
+		label="elixir-eclipse-extension.elixirLS">
+	</server>
+	<contentTypeMapping
+		contentType="elixir-eclipse-extension.elixirFiles"
+		id="elixir-eclipse-extension.elixirLS">
+	</contentTypeMapping>
+</extension>
+   
+<extension point="org.eclipse.core.contenttype.contentTypes">
+	<content-type
+		base-type="org.eclipse.core.runtime.text"
+		file-extensions="ex,exs"
+		id="elixir-eclipse-extension.elixirFiles"
+		name="Elixir files"
+		priority="normal">
+	</content-type>
+</extension>
+
+<extension point="org.eclipse.ui.genericeditor.icons">
+  <icon contentType="elixir-eclipse-extension.elixirFiles" 
+        icon="elixir_file.png"/>
+</extension>
+
+<extension point="org.eclipse.debug.core.launchConfigurationTypes">
+	<launchConfigurationType
+		id="elixir-eclipse-extension.launchType"
+		name="Elixir Application"
+		delegate="LaunchDelegate"
+		modes="run"
+		public="true">
+		</launchConfigurationType>
+</extension>
+
+<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+<launchConfigurationTypeImage
+id="elixir-eclipse-extension.LaunchConfigurationTypeImage"
+configTypeID="elixir-eclipse-extension.launchType"
+icon="elixir.png">
+</launchConfigurationTypeImage>
+</extension>
+   
+<extension point="org.eclipse.debug.ui.launchShortcuts">
+	<shortcut
+		id="elixir-eclipse-extension.launchShortcut"
+		label="Elixir Script"
+		icon="elixir.png"
+		modes="run"
+		class="LaunchShortcut">
+		<contextualLaunch>
+			<enablement>
+				<with variable="selection">
+					<iterate>
+						<adapt type="org.eclipse.core.resources.IFile">
+							<or>
+								<test property="org.eclipse.core.resources.name" value="*.ex"/>
+								<test property="org.eclipse.core.resources.name" value="*.exs"/>
+							</or>
+						</adapt>
+					</iterate>
+				</with>
+			</enablement>
+		</contextualLaunch>
+	</shortcut>
+</extension>
+
+<extension point="org.eclipse.ui.preferencePages"> 
+	<page 
+		id="elixir-eclipse-extension.prefPage" 
+		name="Elixir" 
+		class="PreferencePage"> 
+	</page> 
+</extension>
+
+<extension point="org.eclipse.ui.newWizards">
+	<category
+		id="elixir-eclipse-extension.category"
+		name="Elixir"/>
+	<wizard
+		id="elixir-eclipse-extension.newSourcefileWizard"
+		name="Elixir File"
+		category="elixir-eclipse-extension.category"
+		class="NewSourcefileWizard"
+		icon="elixir_file.png">
+		<description>
+			Create new Elixir source file (.ex)
+		</description>
+	</wizard>
+</extension>
+
+<extension point="org.eclipse.ui.menus">
+	<menuContribution
+		locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
+		<command
+			commandId="org.eclipse.ui.newWizard"
+			label="Elixir File"
+			style="push">
+			<parameter
+				name="newWizardId"
+				value="elixir-eclipse-extension.newSourcefileWizard"/>
+		</command>
+	</menuContribution>
+</extension>
+
+</plugin>
