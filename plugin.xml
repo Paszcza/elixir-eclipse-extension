@@ -19,7 +19,7 @@
 		base-type="org.eclipse.core.runtime.text"
 		file-extensions="ex,exs"
 		id="elixir-eclipse-extension.elixirFiles"
-		name="Elixir files"
+		name="Elixir File"
 		priority="normal">
 	</content-type>
 </extension>
@@ -84,10 +84,10 @@ icon="elixir.png">
 		id="elixir-eclipse-extension.category"
 		name="Elixir"/>
 	<wizard
-		id="elixir-eclipse-extension.newSourcefileWizard"
+		id="elixir-eclipse-extension.newSourceFileWizard"
 		name="Elixir File"
 		category="elixir-eclipse-extension.category"
-		class="NewSourcefileWizard"
+		class="NewSourceFileWizard"
 		icon="elixir_file.png">
 		<description>
 			Create new Elixir source file (.ex)
@@ -104,9 +104,41 @@ icon="elixir.png">
 			style="push">
 			<parameter
 				name="newWizardId"
-				value="elixir-eclipse-extension.newSourcefileWizard"/>
+				value="elixir-eclipse-extension.newSourceFileWizard"/>
 		</command>
 	</menuContribution>
+</extension>
+
+<extension point="org.eclipse.ui.genericeditor.presentationReconcilers">
+	<presentationReconciler
+		class="org.eclipse.tm4e.ui.text.TMPresentationReconciler"
+		contentType="elixir-eclipse-extension.elixirFiles">
+	</presentationReconciler>
+</extension>
+
+<extension point="org.eclipse.tm4e.registry.grammars">
+   <grammar path="Elixir.tmLanguage"
+            scopeName="Elixir TM Scope">
+   </grammar>
+   <scopeNameContentTypeBinding
+      contentTypeId="elixir-eclipse-extension.elixirFiles"
+      scopeName="Elixir TM Scope">
+   </scopeNameContentTypeBinding>
+</extension>
+
+<extension point="org.eclipse.tm4e.ui.themes">
+   <theme
+         dark="true"
+         default="true"
+         id="elixir-eclipse-extension.editorTheme"
+         name="Elixir TM Theme"
+         path="Elixir.tmTheme">
+   </theme>
+   <themeAssociation
+         scopeName="Elixir TM Scope"
+         themeId="elixir-eclipse-extension.editorTheme">
+   </themeAssociation>
+
 </extension>
 
 </plugin>

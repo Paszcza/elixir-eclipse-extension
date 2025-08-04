@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Eclipse Elixir Theme</string>
+    <key>uuid</key>
+    <string>f03440d9-4744-4f7c-9837-f6b409b218e1</string>
+    
+    <key>author</key>
+    <string>Your Name</string>
+    
+    <key>settings</key>
+    <array>
+        <!-- Global settings -->
+        <dict>
+            <key>settings</key>
+            <dict>
+                <!-- Required global settings for Eclipse -->
+                <key>background</key>
+                <string>#1e1e1e</string>
+                <key>foreground</key>
+                <string>#d4d4d4</string>
+                <key>caret</key>
+                <string>#ffffff</string>
+                <key>selection</key>
+                <string>#264f78</string>
+                <key>selectionForeground</key>
+                <string>#ffffff</string>
+                <key>lineHighlight</key>
+                <string>#2a2a2a</string>
+                <key>invisibles</key>
+                <string>#3c3c3c</string>
+                <!-- Eclipse-specific required fields -->
+                <key>guide</key>
+                <string>#3c3c3c</string>
+                <key>stackGuide</key>
+                <string>#3c3c3c</string>
+                <key>activeGuide</key>
+                <string>#4c4c4c</string>
+                <key>bracketsForeground</key>
+                <string>#ffd700</string>
+                <key>bracketsOptions</key>
+                <string>underline</string>
+                <key>bracketContentsForeground</key>
+                <string>#ffd700</string>
+                <key>bracketContentsOptions</key>
+                <string>underline</string>
+                <key>tagsOptions</key>
+                <string>stippled_underline</string>
+            </dict>
+        </dict>
+
+        <!-- Basic syntax elements -->
+        <dict>
+            <key>name</key>
+            <string>Comment</string>
+            <key>scope</key>
+            <string>comment</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#888888</string>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>String</string>
+            <key>scope</key>
+            <string>string</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#429E69</string>
+            </dict>
+        </dict>
+        
+        <!-- Object names -->
+        
+        <dict>
+            <key>name</key>
+            <string>Module_name_at_declaration</string>
+            <key>scope</key>
+            <string>name_mod_dec_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FF5555</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Module_name</string>
+            <key>scope</key>
+            <string>name_mod_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FF8585</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Function_public_name_at_declaration</string>
+            <key>scope</key>
+            <string>name_fun_dec_pub_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ffaa00</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Function_private_name_at_declaration</string>
+            <key>scope</key>
+            <string>name_fun_dec_priv_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ffaa00</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Function_name</string>
+            <key>scope</key>
+            <string>name_fun_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFD580</string>
+            </dict>
+        </dict>
+        
+        <!-- Control elements -->
+        
+        <dict>
+            <key>name</key>
+            <string>Control</string>
+            <key>scope</key>
+            <string>kw_control_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00B8B8</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Definition</string>
+            <key>scope</key>
+            <string>kw_def_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00B8B8</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Inline_def</string>
+            <key>scope</key>
+            <string>kw_do_inline_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00B8B8</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Protocol_def</string>
+            <key>scope</key>
+            <string>kw_defprot_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00B8B8</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Other_op</string>
+            <key>scope</key>
+            <string>kw_op_x_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00FFFF</string>
+            </dict>
+        </dict>
+        
+        <!-- Operators -->
+        
+        
+        <!-- Punctuation -->
+        
+        <dict>
+            <key>name</key>
+            <string>punctuation_dot</string>
+            <key>scope</key>
+            <string>punct_dot_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#29DF71</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Round_bracket</string>
+            <key>scope</key>
+            <string>bracket_round_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#29DF71</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Square_bracket</string>
+            <key>scope</key>
+            <string>bracket_square_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#60D3D3</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Curly_bracket</string>
+            <key>scope</key>
+            <string>bracket_curly_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>string_embed_bracket</string>
+            <key>scope</key>
+            <string>bracket_embed_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict>
+        
+        <!-- Literals and constants -->
+        
+        <dict>
+            <key>name</key>
+            <string>Atom</string>
+            <key>scope</key>
+            <string>atom_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FF72D0</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Built_in_const</string>
+            <key>scope</key>
+            <string>const_lang_ex</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FF42C0</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        
+        <!-- Strings -->
+        
+        <!-- Comments and heredocs -->
+        
+        
+        <!-- Other -->
+        
+    </array>
+</dict>
+</plist>
